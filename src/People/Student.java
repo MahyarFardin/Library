@@ -1,30 +1,49 @@
 package People;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Student extends Person {
 
+    Scanner scanner = new Scanner(System.in);
     String subject = "";
     String university="";
+    String password="";
     ArrayList<String[]> booksBarrowed=new ArrayList<>();
 
 
-    Student(String name, int id, String subject, String university) {
-        super(name, id);
-        this.subject=subject;
-        this.university=university;
+    public Student() {
+        super();
+        
+        System.out.println("\nSubject:");
+        this.subject=scanner.next();
+
+        System.out.println("\nUniversity: ");
+        this.university=scanner.next();
+
+        System.out.println("\nPassword:");
+        this.password=scanner.next();
     }
 
-    void setBooksBarrowed(String[] bookAndDeadLine) {
-        this.booksBarrowed.add(bookAndDeadLine);
+    public void setBooksBarrowed() {
+        String [] information= new String[2];
+
+        System.out.println("\nBook name:");
+        information[0]=scanner.next();
+
+        System.out.println("\nExpire date:");
+        information[1]=scanner.next();
+
+        this.booksBarrowed.add(information);
     }
 
-    void Info() {
+    public void Info() {
         System.out.println("Name: "+this.name);
-        System.out.println("ID: "+this.id);
-        System.out.println("Subject: "+this.subject);
-        System.out.println("University: "+this.university);
+        System.out.println("\nID: "+this.id);
+        System.out.println("\nSubject: "+this.subject);
+        System.out.println("\nUniversity: "+this.university);
         System.out.println(".............................");
+
         for (String[] bookLog : booksBarrowed) {
             System.out.println(bookLog[1]+" "+bookLog[2]);
         }
