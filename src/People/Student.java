@@ -8,7 +8,6 @@ public class Student extends Person {
     Scanner scanner = new Scanner(System.in);
     String subject = "";
     String university="";
-    String password="";
     ArrayList<String[]> booksBarrowed=new ArrayList<>();
 
 
@@ -20,9 +19,6 @@ public class Student extends Person {
 
         System.out.println("\nUniversity: ");
         this.university=scanner.next();
-
-        System.out.println("\nPassword:");
-        this.password=scanner.next();
     }
 
     public void setBooksBarrowed() {
@@ -37,16 +33,18 @@ public class Student extends Person {
         this.booksBarrowed.add(information);
     }
 
+    public void getBooksBarrowed() {
+        for (String[] bookLog : this.booksBarrowed) {
+            System.out.println(bookLog[1]+" "+bookLog[2]);
+        }
+    }
+
     public void Info() {
         System.out.println("Name: "+this.name);
         System.out.println("\nID: "+this.id);
         System.out.println("\nSubject: "+this.subject);
         System.out.println("\nUniversity: "+this.university);
         System.out.println(".............................");
-
-        for (String[] bookLog : booksBarrowed) {
-            System.out.println(bookLog[1]+" "+bookLog[2]);
-        }
     }
 
 }
