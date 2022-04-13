@@ -7,31 +7,53 @@ import Assets.ELangeANDNationality;
 import Products.Enumerators.EGanre;
 import Contributors.Author;
 
-public class Book implements IBook{
-    private String title;
-    private String publisher;
-    private EGanre ganre;
-    private ArrayList<Author> authors;
-    private int page;
-    private Calendar publishedDate;
-    private int code;
-    public int id;
-    private ELangeANDNationality lang;
-    private static int idGenerator;
+public class Book implements IBook {
+    protected String title;
+    protected String publisher;
+    protected EGanre ganre;
+    protected ArrayList<Author> authors;
+    protected int page;
+    protected Calendar publishedDate;
+    protected int code;
+    protected int id;
+    protected ELangeANDNationality lang;
+    protected static int idGenerator;
 
-    public Book(){
-        title="";
-        publisher="";
-        ganre=EGanre.UD;
-        authors=new ArrayList<Author>();
-        publishedDate.set(0,0,0);
-        page=0;
-        code=0;
-        id=0;
-        lang=ELangeANDNationality.UD;
+    public Book() {
+        this.title = "";
+        this.publisher = "";
+        this.ganre = EGanre.UD;
+        this.authors = new ArrayList<Author>();
+        this.publishedDate.set(0, 0, 0);
+        this.page = 0;
+        this.code = 0;
+        this.id = 0;
+        this.lang = ELangeANDNationality.UD;
+
         idGenerator++;
-        id=idGenerator;
+        this.id = idGenerator;
     }
 
-    
+    public Book(String title,
+            String publisher,
+            EGanre ganre,
+            ArrayList<Author> authors,
+            int page,
+            Calendar publishedDate,
+            int code,
+            ELangeANDNationality lang) {
+
+        this.title = title;
+        this.publisher = publisher;
+        this.ganre = ganre;
+        this.authors = authors;
+        this.publishedDate = publishedDate;
+        this.page = page;
+        this.code = code;
+        this.id = 0;
+        this.lang = ELangeANDNationality.UD;
+        idGenerator++;
+        this.id = idGenerator;
+    }
+
 }
