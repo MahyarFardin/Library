@@ -1,6 +1,7 @@
 package Products;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import Assets.ELangeANDNationality;
 import Products.Enumerators.EGanre;
@@ -12,7 +13,7 @@ public class Book implements IBook{
     private EGanre ganre;
     private ArrayList<Author> authors;
     private int page;
-    private int year;
+    private Calendar publishedDate;
     private int code;
     public int id;
     private ELangeANDNationality lang;
@@ -23,6 +24,7 @@ public class Book implements IBook{
         publisher="";
         ganre=EGanre.UD;
         authors=new ArrayList<Author>();
+        publishedDate.set(0,0,0);
         page=0;
         code=0;
         id=0;

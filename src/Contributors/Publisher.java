@@ -10,4 +10,8 @@ public class Publisher {
         name="";
         country=ELangeANDNationality.UD;
     }
+    public Publisher(String name, ELangeANDNationality country){
+        this.name=name;
+        this.country=country;
+    }
 }
