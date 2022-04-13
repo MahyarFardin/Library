@@ -1,5 +1,5 @@
 package Products.Physical;
 
-public class IPhysical {
+public interface IPhysical {
     
 }

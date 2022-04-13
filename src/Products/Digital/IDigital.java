@@ -1,5 +1,5 @@
 package Products.Digital;
 
-public class IDigital {
+public interface IDigital {
     
 }

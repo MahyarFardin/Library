@@ -1,5 +1,5 @@
 package Products.Enumerators;
 
-public class EGanre {
-    
+public enum EGanre {
+    Fun, Tech, Science, Physics, Chemistry, Historical, Novel, UD;
 }
