@@ -1,4 +1,4 @@
-package Contributors;
+package Contributors.Entities;
 
 import Assets.ELangeANDNationality;
 
