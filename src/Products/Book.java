@@ -6,29 +6,31 @@ import java.util.Date;
 import Assets.ELangeANDNationality;
 import Contributors.People.Author;
 import Products.Enumerators.EGanre;
+import Tag.ITagList;
+import Tag.TagList;
 
 public class Book implements IBook {
     protected String title;
     protected String publisher;
-    protected EGanre ganre;
+    protected ITagList ganre;
     protected ArrayList<Author> authors;
     protected int page;
     protected Date publishedDate;
     protected int code;
     protected int id;
-    protected ELangeANDNationality lang;
+    protected ITagList lang;
     protected static int idGenerator;
 
     public Book() {
         this.title = "";
         this.publisher = "";
-        this.ganre = EGanre.UD;
+        this.ganre = null;
         this.authors = new ArrayList<Author>();
         this.publishedDate = null;
         this.page = 0;
         this.code = 0;
         this.id = 0;
-        this.lang = ELangeANDNationality.UD;
+        this.lang =null;
 
         idGenerator++;
         this.id = idGenerator;
@@ -36,12 +38,12 @@ public class Book implements IBook {
 
     public Book(String title,
             String publisher,
-            EGanre ganre,
+            ITagList ganre,
             ArrayList<Author> authors,
             int page,
             Date publishedDate,
             int code,
-            ELangeANDNationality lang) {
+            ITagList lang) {
 
         this.title = title;
         this.publisher = publisher;
@@ -51,7 +53,7 @@ public class Book implements IBook {
         this.page = page;
         this.code = code;
         this.id = 0;
-        this.lang = ELangeANDNationality.UD;
+        this.lang = lang;
         idGenerator++;
         this.id = idGenerator;
     }
