@@ -4,7 +4,7 @@ import java.util.Date;
 
 import Contributors.Enumerators.EGender;
 
-public class Member extends Person {
+public class Member extends Person implements IMember{
     
     private int id;
     private String password;
@@ -46,5 +46,33 @@ public class Member extends Person {
         this.joinDate = new Date(member.joinDate.getTime());
         this.email = member.email;
         this.number = member.number;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+    public int getId() {
+        return id;
+    }
+    public Date getJoinDate() {
+        return joinDate;
+    }
+    public String getNumber() {
+        return number;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public void setNumber(String number) {
+        this.number = number;
+    }
+    public void setJoinDate(Date joinDate) {
+        this.joinDate = joinDate;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

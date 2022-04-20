@@ -5,13 +5,11 @@ import java.util.Date;
 import Contributors.Enumerators.EGender;
 import Contributors.Enumerators.EPosition;
 
-class Employee extends Member {
+class Employee extends Member implements IEmployee{
     private EPosition position;
-    private String id;
 
     public Employee() {
         this.position = EPosition.Ud;
-        this.id = "";
     }
 
     public Employee(String password,
@@ -35,12 +33,16 @@ class Employee extends Member {
                 gender);
 
         this.position = position;
-        this.id = id;
     }
 
     public Employee(Employee employee){
         super(employee);
         this.position = employee.position;
-        this.id = employee.id;
+    }
+    public EPosition getPosition() {
+        return position;
+    }
+    public void setPosition(EPosition position) {
+        this.position = position;
     }
 }
