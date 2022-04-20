@@ -47,5 +47,23 @@ public class DigitalBook extends Book implements IDigital, IBarrowable {
         this.fileType = digitalBook.fileType;
     }
 
-
+    
+    public void setDateCreated(Date dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+    public void setFileType(EFileType fileType) {
+        this.fileType = fileType;
+    }
+    public void setSize(int size) {
+        this.size = size;
+    }
+    public Date getDateCreated() {
+        return dateCreated;
+    }
+    public EFileType getFileType() {
+        return fileType;
+    }
+    public int getSize() {
+        return size;
+    }
 }
