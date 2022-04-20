@@ -1,7 +1,7 @@
 package Products;
 
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.Date;
 
 import Assets.ELangeANDNationality;
 import Contributors.People.Author;
@@ -13,7 +13,7 @@ public class Book implements IBook {
     protected EGanre ganre;
     protected ArrayList<Author> authors;
     protected int page;
-    protected Calendar publishedDate;
+    protected Date publishedDate;
     protected int code;
     protected int id;
     protected ELangeANDNationality lang;
@@ -24,7 +24,7 @@ public class Book implements IBook {
         this.publisher = "";
         this.ganre = EGanre.UD;
         this.authors = new ArrayList<Author>();
-        this.publishedDate.set(0, 0, 0);
+        this.publishedDate=null;
         this.page = 0;
         this.code = 0;
         this.id = 0;

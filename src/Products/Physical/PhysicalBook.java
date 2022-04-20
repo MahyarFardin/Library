@@ -1,7 +1,7 @@
 package Products.Physical;
 
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.Date;
 
 import Assets.ELangeANDNationality;
 import Contributors.People.Author;
@@ -25,11 +25,11 @@ public class PhysicalBook extends Book implements IPhysical, IBarrowable {
             EGanre ganre,
             ArrayList<Author> authors,
             int page,
-            Calendar publishedDate,
+            Date publishedDate,
             int code,
             ELangeANDNationality lang,
             int size,
-            Calendar dateCreated,
+            Date dateCreated,
             EFileType fileType,
             int sizeType,
             int healthState) {
@@ -37,5 +37,11 @@ public class PhysicalBook extends Book implements IPhysical, IBarrowable {
         super(title, publisher, ganre, authors, page, publishedDate, code, lang);
         this.sizeType = sizeType;
         this.healthState = healthState;
+    }
+
+    public PhysicalBook(PhysicalBook physicalBook){
+        super(physicalBook);
+        this.sizeType = physicalBook.sizeType;
+        this.healthState = physicalBook.healthState;
     }
 }

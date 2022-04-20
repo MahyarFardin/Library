@@ -1,7 +1,7 @@
 package Products.Digital;
 
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.Date;
 
 import Assets.ELangeANDNationality;
 import Contributors.People.Author;
@@ -12,13 +12,13 @@ import Transactions.IBarrowable;
 
 public class DigitalBook extends Book implements IDigital, IBarrowable {
     private int size;
-    private Calendar dateCreated;
+    private Date dateCreated;
     private EFileType fileType;
 
     public DigitalBook() {
         super();
         size = 0;
-        dateCreated.set(0, 0, 0);
+        dateCreated=null;
         fileType = EFileType.UD;
     }
 
@@ -27,11 +27,11 @@ public class DigitalBook extends Book implements IDigital, IBarrowable {
             EGanre ganre,
             ArrayList<Author> authors,
             int page,
-            Calendar publishedDate,
+            Date publishedDate,
             int code,
             ELangeANDNationality lang,
             int size,
-            Calendar dateCreated,
+            Date dateCreated,
             EFileType fileType) {
 
         super(title, publisher, ganre, authors, page, publishedDate, code, lang);
@@ -39,4 +39,13 @@ public class DigitalBook extends Book implements IDigital, IBarrowable {
         this.dateCreated = dateCreated;
         this.fileType = fileType;
     }
+
+    public DigitalBook(DigitalBook digitalBook){
+        super(digitalBook);
+        this.size = digitalBook.size;
+        this.dateCreated = digitalBook.dateCreated;
+        this.fileType = digitalBook.fileType;
+    }
+
+
 }
