@@ -14,4 +14,7 @@ public class Publisher {
         this.name=name;
         this.country=country;
     }
+    public Publisher(Publisher publisher){
+        this(publisher.name, publisher.country);
+    }
 }
