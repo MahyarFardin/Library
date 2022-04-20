@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 import Assets.ELangeANDNationality;
-import Contributors.Author;
+import Contributors.People.Author;
 import Products.Book;
 import Products.Enumerators.EFileType;
 import Products.Enumerators.EGanre;

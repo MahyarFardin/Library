@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 import Assets.ELangeANDNationality;
+import Contributors.People.Author;
 import Products.Enumerators.EGanre;
-import Contributors.Author;
 
 public class Book implements IBook {
     protected String title;
@@ -56,4 +56,7 @@ public class Book implements IBook {
         this.id = idGenerator;
     }
 
+    public Book (Book book){
+        this(book.title, book.publisher, book.ganre, new ArrayList<>(book.authors), book.page, book.publishedDate, book.code, book.lang);
+    }
 }

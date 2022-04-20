@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 import Assets.ELangeANDNationality;
-import Contributors.Author;
+import Contributors.People.Author;
 import Products.Book;
 import Products.Enumerators.EFileType;
 import Products.Enumerators.EGanre;
@@ -33,7 +33,7 @@ public class PhysicalBook extends Book implements IPhysical, IBarrowable {
             EFileType fileType,
             int sizeType,
             int healthState) {
-                
+
         super(title, publisher, ganre, authors, page, publishedDate, code, lang);
         this.sizeType = sizeType;
         this.healthState = healthState;

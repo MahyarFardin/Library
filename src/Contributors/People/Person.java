@@ -1,30 +1,34 @@
 package Contributors.People;
 
-import java.util.Calendar;
+import java.util.*;
 
 import Contributors.Enumerators.EGender;
 
-public class Person {
+public class Person implements IPerson {
     private String firstName;
     private String lastName;
-    private Calendar birthDate;
+    private Date birthDate;
     private EGender gender;
 
     public Person() {
         this.firstName = "";
         this.lastName = "";
-        this.birthDate.set(0, 0, 0);
+        this.birthDate = null;
         this.gender = EGender.UD;
     }
 
     public Person(String firstName,
             String lastName,
-            Calendar birthDate,
+            Date birthDate,
             EGender gender) {
-                
+
         this.firstName = "";
         this.lastName = "";
-        this.birthDate.set(0, 0, 0);
+        this.birthDate = birthDate;
         this.gender = EGender.UD;
+    }
+
+    public Person(Person person) {
+        this(person.firstName, person.lastName,new Date(person.birthDate.getTime()), person.gender);
     }
 }

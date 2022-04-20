@@ -1,6 +1,6 @@
 package Contributors.People;
 
-import java.util.Calendar;
+import java.util.Date;
 
 import Contributors.Enumerators.EGender;
 import Contributors.Enumerators.EPosition;
@@ -11,16 +11,16 @@ class Employee extends Member {
 
     public Employee() {
         this.position = EPosition.Ud;
-        this.id = id;
+        this.id = "";
     }
 
     public Employee(String password,
-            Calendar joinDate,
+            Date joinDate,
             String email,
             String number,
             String firstName,
             String lastName,
-            Calendar birthDate,
+            Date birthDate,
             EGender gender,
             EPosition position,
             String id) {
@@ -33,8 +33,14 @@ class Employee extends Member {
                 lastName,
                 birthDate,
                 gender);
-                
+
         this.position = position;
         this.id = id;
+    }
+
+    public Employee(Employee employee){
+        super(employee);
+        this.position = employee.position;
+        this.id = employee.id;
     }
 }
