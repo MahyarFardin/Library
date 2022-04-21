@@ -12,13 +12,13 @@ import Tag.TagList;
 public class Book implements IBook {
     protected String title;
     protected String publisher;
-    protected ITagList ganre;
+    protected EGanre ganre;
     protected ArrayList<Author> authors;
     protected int page;
     protected Date publishedDate;
     protected int code;
     protected int id;
-    protected ITagList lang;
+    protected ELangeANDNationality lang;
     protected static int idGenerator;
 
     public Book() {
