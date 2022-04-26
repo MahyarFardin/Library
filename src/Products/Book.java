@@ -18,6 +18,8 @@ public class Book implements IBook {
     protected int id;
     protected ITagList lang;
     protected static int idGenerator;
+    protected int barrowLog;
+    protected static int numberOfCopies;
 
     public Book() {
         this.title = "";
@@ -29,6 +31,7 @@ public class Book implements IBook {
         this.code = 0;
         this.id = 0;
         this.lang =null;
+        this.numberOfCopies=0;
 
         idGenerator++;
         this.id = idGenerator;
@@ -41,7 +44,8 @@ public class Book implements IBook {
             int page,
             Date publishedDate,
             int code,
-            ITagList lang) {
+            ITagList lang,
+            int numberOfCopies) {
 
         this.title = title;
         this.publisher = publisher;
@@ -52,13 +56,14 @@ public class Book implements IBook {
         this.code = code;
         this.id = 0;
         this.lang = new TagList("ganre");
+        this.numberOfCopies=numberOfCopies;
         idGenerator++;
         this.id = idGenerator;
     }
 
     public Book(Book book) {
         this(book.title, book.publisher, book.ganre, new ArrayList<>(book.authors), book.page, book.publishedDate,
-                book.code, book.lang);
+                book.code, book.lang, numberOfCopies);
     }
 
     public void setAuthors(ArrayList<Author> authors) {
@@ -100,6 +105,9 @@ public class Book implements IBook {
     public void setTitle(String title) {
         this.title = title;
     }
+    public void setBarrowLog(boolean barrowLog) {
+        this.barrowLog = barrowLog;
+    }
 
     public ArrayList<Author> getAuthors() {
         return authors;
@@ -139,5 +147,12 @@ public class Book implements IBook {
 
     public String getTitle() {
         return title;
+    }
+
+    public int getNumberOfCopies() {
+        return numberOfCopies;
+    }
+    public void setNumberOfCopies(int numberOfCopies) {
+        this.numberOfCopies = numberOfCopies;
     }
 }

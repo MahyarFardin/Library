@@ -29,6 +29,8 @@ public interface IBook {
 
     public ArrayList<Author> getAuthors();
 
+    public void setBarrowLog(int barrowLog);
+
     public int getCode();
 
     public ITagList getGanre();
@@ -45,6 +47,11 @@ public interface IBook {
 
     public String getTitle();
 
+    public int getNumberOfCopies();
+
+    public void setNumberOfCopies(int numberOfCopies);
+
+    public int getBarrowLog();
     
     public static Book CreateBook(boolean type){
         if (type==true) {

@@ -32,7 +32,7 @@ public class DigitalBook extends Book implements IDigital, IBarrowable {
             Date dateCreated,
             ITagList fileType) {
 
-        super(title, publisher, ganre, authors, page, publishedDate, code, lang);
+        super(title, publisher, ganre, authors, page, publishedDate, code, lang, numberOfCopies);
         this.size = size;
         this.dateCreated = dateCreated;
         this.fileType = fileType;
