@@ -2,30 +2,31 @@ package Contributors.People;
 
 import java.util.*;
 
-import Contributors.Enumerators.EGender;
+import Tag.ITagList;
+
 
 public class Person implements IPerson {
     private String firstName;
     private String lastName;
     private Date birthDate;
-    private EGender gender;
+    private ITagList gender;
 
     public Person() {
         this.firstName = "";
         this.lastName = "";
         this.birthDate = null;
-        this.gender = EGender.UD;
+        this.gender = null;
     }
 
     public Person(String firstName,
             String lastName,
             Date birthDate,
-            EGender gender) {
+            ITagList gender) {
 
         this.firstName = "";
         this.lastName = "";
         this.birthDate = birthDate;
-        this.gender = EGender.UD;
+        this.gender = null;
     }
 
     public Person(Person person) {

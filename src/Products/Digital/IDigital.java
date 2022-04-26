@@ -2,14 +2,18 @@ package Products.Digital;
 
 import java.util.Date;
 
-import Products.Enumerators.EFileType;
+import Tag.ITagList;
 
 public interface IDigital {
     
     public void setDateCreated(Date dateCreated);
-    public void setFileType(EFileType fileType);
+    public void setFileType(ITagList fileType);
     public void setSize(int size);
     public Date getDateCreated();
-    public EFileType getFileType();
+    public ITagList getFileType();
     public int getSize();
+
+    public static DigitalBook creatPublisher() {
+        return new DigitalBook();
+    }
 }

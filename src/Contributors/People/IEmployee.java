@@ -1,8 +1,8 @@
 package Contributors.People;
 
-import Contributors.Enumerators.EPosition;
+import Tag.ITagList;
 
 public interface IEmployee {
-    public EPosition getPosition();
-    public void setPosition(EPosition position);
+    public ITagList getPosition();
+    public void setPosition(ITagList position);
 }

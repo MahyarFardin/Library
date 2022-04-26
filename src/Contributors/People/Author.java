@@ -3,16 +3,17 @@ import java.util.Date;
 
 import Assets.ELangeANDNationality;
 import Contributors.Enumerators.EGender;
+import Tag.ITagList;
 
 public class Author extends Person implements IAuthor{
 
-    private ELangeANDNationality nationality;
+    private ITagList nationality;
 
     public Author(){
-        nationality=ELangeANDNationality.UD;
+        nationality=null;
     }
 
-    public Author(String fName, String lName, Date time, ELangeANDNationality nat, EGender gender){
+    public Author(String fName, String lName, Date time, ITagList nat, ITagList gender){
         super(fName, lName, time, gender);
         this.nationality=nat;
     }
@@ -23,12 +24,12 @@ public class Author extends Person implements IAuthor{
     }
 
     @Override
-    public void setNationality(ELangeANDNationality nationality) {
+    public void setNationality(ITagList nationality) {
         this.nationality = nationality;
     }
     @Override
     
-    public ELangeANDNationality getNationality() {
+    public ITagList getNationality() {
         return nationality;
     }
     

@@ -2,14 +2,13 @@ package Contributors.People;
 
 import java.util.Date;
 
-import Contributors.Enumerators.EGender;
-import Contributors.Enumerators.EPosition;
+import Tag.ITagList;
 
 class Employee extends Member implements IEmployee{
-    private EPosition position;
+    private ITagList position;
 
     public Employee() {
-        this.position = EPosition.Ud;
+        this.position = null;
     }
 
     public Employee(String password,
@@ -19,8 +18,8 @@ class Employee extends Member implements IEmployee{
             String firstName,
             String lastName,
             Date birthDate,
-            EGender gender,
-            EPosition position,
+            ITagList gender,
+            ITagList position,
             String id) {
 
         super(password,
@@ -39,10 +38,10 @@ class Employee extends Member implements IEmployee{
         super(employee);
         this.position = employee.position;
     }
-    public EPosition getPosition() {
+    public ITagList getPosition() {
         return position;
     }
-    public void setPosition(EPosition position) {
+    public void setPosition(ITagList position) {
         this.position = position;
     }
 }

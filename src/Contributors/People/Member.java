@@ -1,8 +1,7 @@
 package Contributors.People;
 
 import java.util.Date;
-
-import Contributors.Enumerators.EGender;
+import Tag.ITagList;
 
 public class Member extends Person implements IMember{
     
@@ -28,7 +27,7 @@ public class Member extends Person implements IMember{
             String firstName,
             String lastName,
             Date birthDate,
-            EGender gender) {
+            ITagList gender) {
 
         super(firstName, lastName, birthDate, gender);
 
