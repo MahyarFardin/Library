@@ -3,11 +3,9 @@ package Products.Physical;
 import java.util.ArrayList;
 import java.util.Date;
 
-import Assets.ELangeANDNationality;
 import Contributors.People.Author;
 import Products.Book;
-import Products.Enumerators.EFileType;
-import Products.Enumerators.EGanre;
+import Tag.ITagList;
 import Transactions.IBarrowable;
 
 public class PhysicalBook extends Book implements IPhysical, IBarrowable {
@@ -22,15 +20,15 @@ public class PhysicalBook extends Book implements IPhysical, IBarrowable {
 
     public PhysicalBook(String title,
             String publisher,
-            EGanre ganre,
+            ITagList ganre,
             ArrayList<Author> authors,
             int page,
             Date publishedDate,
             int code,
-            ELangeANDNationality lang,
+            ITagList lang,
             int size,
             Date dateCreated,
-            EFileType fileType,
+            ITagList fileType,
             int sizeType,
             int healthState) {
 
@@ -43,5 +41,18 @@ public class PhysicalBook extends Book implements IPhysical, IBarrowable {
         super(physicalBook);
         this.sizeType = physicalBook.sizeType;
         this.healthState = physicalBook.healthState;
+    }
+
+    public void setSizeType(int sizeType) {
+        this.sizeType = sizeType;
+    }
+    public int getSizeType() {
+        return sizeType;
+    }
+    public void setHealthState(int healthState) {
+        this.healthState = healthState;
+    }
+    public int getHealthState() {
+        return healthState;
     }
 }

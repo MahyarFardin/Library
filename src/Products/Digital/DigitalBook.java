@@ -3,36 +3,34 @@ package Products.Digital;
 import java.util.ArrayList;
 import java.util.Date;
 
-import Assets.ELangeANDNationality;
 import Contributors.People.Author;
 import Products.Book;
-import Products.Enumerators.EFileType;
-import Products.Enumerators.EGanre;
+import Tag.ITagList;
 import Transactions.IBarrowable;
 
 public class DigitalBook extends Book implements IDigital, IBarrowable {
     private int size;
     private Date dateCreated;
-    private EFileType fileType;
+    private ITagList fileType;
 
     public DigitalBook() {
         super();
         size = 0;
         dateCreated=null;
-        fileType = EFileType.UD;
+        fileType = null;
     }
 
     public DigitalBook(String title,
             String publisher,
-            EGanre ganre,
+            ITagList ganre,
             ArrayList<Author> authors,
             int page,
             Date publishedDate,
             int code,
-            ELangeANDNationality lang,
+            ITagList lang,
             int size,
             Date dateCreated,
-            EFileType fileType) {
+            ITagList fileType) {
 
         super(title, publisher, ganre, authors, page, publishedDate, code, lang);
         this.size = size;
@@ -51,7 +49,7 @@ public class DigitalBook extends Book implements IDigital, IBarrowable {
     public void setDateCreated(Date dateCreated) {
         this.dateCreated = dateCreated;
     }
-    public void setFileType(EFileType fileType) {
+    public void setFileType(ITagList fileType) {
         this.fileType = fileType;
     }
     public void setSize(int size) {
@@ -60,7 +58,7 @@ public class DigitalBook extends Book implements IDigital, IBarrowable {
     public Date getDateCreated() {
         return dateCreated;
     }
-    public EFileType getFileType() {
+    public ITagList getFileType() {
         return fileType;
     }
     public int getSize() {

@@ -1,6 +1,8 @@
 package Contributors.People;
 
+import Tag.ITagList;
+
 public interface IAuthor {
-    public void setNationality();
-    public void getNationality();
+    public void setNationality(ITagList nationality);
+    public ITagList getNationality();
 }

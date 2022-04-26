@@ -1,4 +1,4 @@
-package Products.Log;
+package Log;
 
 import java.io.*;
 

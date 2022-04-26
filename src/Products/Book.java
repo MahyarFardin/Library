@@ -3,22 +3,20 @@ package Products;
 import java.util.ArrayList;
 import java.util.Date;
 
-import Assets.ELangeANDNationality;
 import Contributors.People.Author;
-import Products.Enumerators.EGanre;
 import Tag.ITagList;
 import Tag.TagList;
 
 public class Book implements IBook {
     protected String title;
     protected String publisher;
-    protected EGanre ganre;
+    protected ITagList ganre;
     protected ArrayList<Author> authors;
     protected int page;
     protected Date publishedDate;
     protected int code;
     protected int id;
-    protected ELangeANDNationality lang;
+    protected ITagList lang;
     protected static int idGenerator;
 
     public Book() {
@@ -53,7 +51,7 @@ public class Book implements IBook {
         this.page = page;
         this.code = code;
         this.id = 0;
-        this.lang = lang;
+        this.lang = new TagList("ganre");
         idGenerator++;
         this.id = idGenerator;
     }
@@ -71,7 +69,7 @@ public class Book implements IBook {
         this.code = code;
     }
 
-    public void setGanre(EGanre ganre) {
+    public void setGanre(ITagList ganre) {
         this.ganre = ganre;
     }
 
@@ -83,7 +81,7 @@ public class Book implements IBook {
         Book.idGenerator = idGenerator;
     }
 
-    public void setLang(ELangeANDNationality lang) {
+    public void setLang(ITagList lang) {
         this.lang = lang;
     }
 
@@ -111,7 +109,7 @@ public class Book implements IBook {
         return code;
     }
 
-    public EGanre getGanre() {
+    public ITagList getGanre() {
         return ganre;
     }
 
@@ -123,7 +121,7 @@ public class Book implements IBook {
         return idGenerator;
     }
 
-    public ELangeANDNationality getLang() {
+    public ITagList getLang() {
         return lang;
     }
 

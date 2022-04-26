@@ -3,11 +3,16 @@ package Tag;
 import java.util.ArrayList;
 
 public class TagList implements ITagList{
-    private ArrayList<Tag> tagList= new ArrayList<>();
+    private ArrayList<Tag> tagList;
     private String name;
 
     public TagList(String name){
         this.name=name;
+        this.tagList= new ArrayList<>();
+    }
+    public TagList(){
+        this.name=null;
+        this.tagList=null;
     }
 
     @Override
