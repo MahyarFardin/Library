@@ -14,6 +14,7 @@ public class Tag implements ITag{
     public void setName(String name) {
         this.name = name;
     }
+    
     @Override
     public String getName() {
         return name;

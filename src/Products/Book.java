@@ -105,7 +105,7 @@ public class Book implements IBook {
     public void setTitle(String title) {
         this.title = title;
     }
-    public void setBarrowLog(boolean barrowLog) {
+    public void setBarrowLog(int barrowLog) {
         this.barrowLog = barrowLog;
     }
 
@@ -154,5 +154,8 @@ public class Book implements IBook {
     }
     public void setNumberOfCopies(int numberOfCopies) {
         this.numberOfCopies = numberOfCopies;
+    }
+    public int getBarrowLog() {
+        return barrowLog;
     }
 }

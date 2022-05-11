@@ -3,7 +3,7 @@ package Log;
 import java.io.*;
 
 public class LogCollector {
-    public void Logger(String information){
+    public static void Logger(String information){
         File logFile= new File("Log.log");
         try {
             FileWriter fileWriter = new FileWriter(logFile);        

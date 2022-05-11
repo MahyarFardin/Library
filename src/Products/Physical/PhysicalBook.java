@@ -32,7 +32,7 @@ public class PhysicalBook extends Book implements IPhysical, IBarrowable {
             int sizeType,
             int healthState) {
 
-        super(title, publisher, ganre, authors, page, publishedDate, code, lang);
+        super(title, publisher, ganre, authors, page, publishedDate, code, lang, numberOfCopies);
         this.sizeType = sizeType;
         this.healthState = healthState;
     }
