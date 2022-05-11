@@ -1,6 +1,7 @@
 package Contributors.People;
 import java.util.Date;
 
+// these were for the first version
 import Assets.ELangeANDNationality;
 import Contributors.Enumerators.EGender;
 import Tag.ITagList;

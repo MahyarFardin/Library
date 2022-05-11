@@ -2,8 +2,10 @@ package Products;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.logging.Logger;
 
 import Contributors.People.Author;
+import Log.LogCollector;
 import Tag.ITagList;
 import Tag.TagList;
 
@@ -59,6 +61,8 @@ public class Book implements IBook {
         this.numberOfCopies=numberOfCopies;
         idGenerator++;
         this.id = idGenerator;
+
+        LogCollector.Logger("new book created"+"    "+this.getTitle());
     }
 
     public Book(Book book) {

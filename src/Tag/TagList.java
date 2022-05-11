@@ -6,6 +6,9 @@ public class TagList implements ITagList{
     private ArrayList<Tag> tagList;
     private String name;
 
+    public TagList(ITagList list){
+        new TagList(list);
+    }
     public TagList(String name){
         this.name=name;
         this.tagList= new ArrayList<>();
@@ -44,10 +47,10 @@ public class TagList implements ITagList{
     }
 
     @Override
-    public boolean addTag(String name) {
+    public boolean addTag(Tag name) {
         for (Tag tag: tagList){
             if (!tag.equals(name))
-                tagList.add(tag);
+                tagList.add(name);
         }
         return false;          
     }

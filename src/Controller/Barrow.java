@@ -36,8 +36,8 @@ public class Barrow {
     }
 
     private void Penalty(IMember member, int day){
-        System.out.println(member.getId()+"has to paye"+String.valueOf(day*1500));
-        LogCollector.Logger(member.getId()+"has to paye"+String.valueOf(day*1500));
+        System.out.println(member.getId()+"has to pay"+String.valueOf(day*1500));
+        LogCollector.Logger(member.getId()+"has to pay"+String.valueOf(day*1500));
     }
 
     public void ReBarrow(){
